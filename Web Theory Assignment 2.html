@@ -1,0 +1,652 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shoaib Portfolio | Web Development</title>
+
+    <!-- External CSS: Registration Form Only -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Embedded CSS: Projects, Courses, Events and Tables -->
+    <style>
+        /* Projects Section */
+        .project-section {
+            margin: 30px auto;
+            padding: 28px;
+            background: white;
+            border: 1px solid #dce5eb;
+            border-radius: 14px;
+            box-shadow: 0 5px 18px rgba(20, 50, 60, 0.07);
+        }
+
+        .section-heading {
+            margin: 0 0 24px;
+            color: #087f8c;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        .project-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .project-list li {
+            padding: 20px;
+            border: 1px solid #dce5eb;
+            border-top: 4px solid #087f8c;
+            border-radius: 10px;
+            background: #f9fcfd;
+            line-height: 1.8;
+        }
+
+        .project-list li strong {
+            color: #075b66;
+            font-size: 18px;
+        }
+
+        /* Tables Section */
+        .table-section {
+            margin: 30px auto;
+            padding: 25px;
+            background: white;
+            border: 1px solid #dce5eb;
+            border-radius: 14px;
+            box-shadow: 0 5px 18px rgba(20, 50, 60, 0.07);
+        }
+
+        .table-heading {
+            margin: 0 0 18px;
+            padding: 14px;
+            color: white;
+            background: #075b66;
+            border-radius: 7px;
+            text-align: center;
+            font-size: 23px;
+        }
+
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            border: 1px solid #dce5eb;
+            border-radius: 8px;
+        }
+
+        .data-table {
+            width: 100%;
+            min-width: 500px;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        .data-table caption {
+            padding: 12px;
+            color: #075b66;
+            background: #e9f6f7;
+            font-size: 17px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 13px 15px;
+            border: 1px solid #dce5eb;
+            text-align: left;
+        }
+
+        .data-table th {
+            color: white;
+            background: #087f8c;
+        }
+
+        .data-table tbody tr:nth-child(even) {
+            background: #f0f8fa;
+        }
+
+        .data-table tbody tr:hover {
+            background: #dff3f4;
+        }
+
+        @media (max-width: 600px) {
+            .project-section,
+            .table-section {
+                padding: 16px;
+            }
+
+            .section-heading {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body style="margin:0; background:#f3f7fb; color:#263238;
+             font-family:Arial, Helvetica, sans-serif; line-height:1.7;">
+
+    <!-- HEADER: INLINE CSS -->
+    <header id="home"
+        style="padding:28px 15px; color:white;
+               background:linear-gradient(135deg,#075b66,#08adbc);
+               text-align:center;">
+
+        <h1 style="margin:0; font-size:clamp(30px,5vw,46px);">
+            Shoaib
+            <span style="color:#ffd166;">Portfolio</span>
+        </h1>
+
+        <p style="margin:5px 0 20px; font-size:17px; color:#eafcff;">
+            BSCS Student &amp; Web Developer
+        </p>
+
+        <!-- Navigation: INLINE CSS -->
+        <nav aria-label="Main navigation">
+            <ul style="display:flex; flex-wrap:wrap; justify-content:center;
+                       gap:10px; padding:0; margin:0; list-style:none;">
+
+                <li>
+                    <a href="#home"
+                       style="display:block; padding:8px 13px; color:white;
+                              text-decoration:none; font-weight:bold;">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about"
+                       style="display:block; padding:8px 13px; color:white;
+                              text-decoration:none; font-weight:bold;">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#skills"
+                       style="display:block; padding:8px 13px; color:white;
+                              text-decoration:none; font-weight:bold;">
+                        Skills
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#projects"
+                       style="display:block; padding:8px 13px; color:white;
+                              text-decoration:none; font-weight:bold;">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#courses"
+                       style="display:block; padding:8px 13px; color:white;
+                              text-decoration:none; font-weight:bold;">
+                        Courses
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#registration"
+                       style="display:block; padding:8px 13px; color:white;
+                              text-decoration:none; font-weight:bold;">
+                        Registration
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact"
+                       style="display:block; padding:8px 13px; color:white;
+                              text-decoration:none; font-weight:bold;">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="width:92%; max-width:1100px; margin:25px auto;">
+
+        <!-- ABOUT: INLINE CSS -->
+        <section id="about"
+            style="padding:30px 20px; margin-bottom:25px;
+                   text-align:center; background:white;
+                   border:1px solid #dce5eb; border-radius:14px;
+                   box-shadow:0 5px 18px rgba(20,50,60,0.07);">
+
+            <h2 style="color:#087f8c; font-size:30px;">
+                About Me
+            </h2>
+
+            <figure style="margin:20px auto;">
+                <!-- Save your picture in the images folder as profile.jpg -->
+                <img src="c:\Users\ss\Downloads\WhatsApp Image 2026-10-16 at 8.44.45 PM.jpeg"
+                     alt="Shoaib's profile picture"
+                     width="180" height="180"
+                     style="width:180px; height:180px; max-width:100%;
+                            object-fit:cover; border-radius:50%;
+                            border:5px solid #d7f4f5;">
+
+                <figcaption style="color:#60727a; margin-top:10px;">
+                    BSCS Student &amp; Web Developer
+                </figcaption>
+            </figure>
+
+            <h3 style="font-size:23px;">Hi Everyone, I am Shoaib!</h3>
+
+            <p style="max-width:760px; margin:0 auto; color:#52666f;">
+                I am currently pursuing a BSCS degree at Lahore Garrison
+                University. I am learning web development and programming,
+                with an interest in HTML, CSS, JavaScript, Python, and C++.
+                My goal is to develop useful, accessible, and user-friendly
+                websites and practical software projects.
+            </p>
+        </section>
+
+        <!-- SKILLS: INLINE CSS -->
+        <section id="skills"
+            style="padding:28px; margin:30px auto; background:white;
+                   border:1px solid #dce5eb; border-radius:14px;">
+
+            <h2 style="text-align:center; color:#087f8c;">
+                Core Technical Skills
+            </h2>
+
+            <div style="max-width:800px; margin:auto;">
+
+                <p><strong>HTML</strong></p>
+                <progress value="85" max="100"
+                    style="width:100%; height:17px; accent-color:#087f8c;">
+                    85%
+                </progress>
+
+                <p><strong>CSS</strong></p>
+                <progress value="80" max="100"
+                    style="width:100%; height:17px; accent-color:#087f8c;">
+                    80%
+                </progress>
+
+                <p><strong>JavaScript</strong></p>
+                <progress value="75" max="100"
+                    style="width:100%; height:17px; accent-color:#087f8c;">
+                    75%
+                </progress>
+
+                <p><strong>Python</strong></p>
+                <progress value="93" max="100"
+                    style="width:100%; height:17px; accent-color:#087f8c;">
+                    93%
+                </progress>
+
+                <p><strong>C++</strong></p>
+                <progress value="70" max="100"
+                    style="width:100%; height:17px; accent-color:#087f8c;">
+                    70%
+                </progress>
+
+            </div>
+        </section>
+
+        <!-- PROJECTS: EMBEDDED CSS -->
+        <section class="project-section" id="projects">
+            <h2 class="section-heading">My Projects</h2>
+
+            <ul class="project-list">
+                <li>
+                    <strong>Student Management System</strong>
+                    <p>
+                        Developed a student management system using Python
+                        and MySQL to manage student records, course details,
+                        and marks.
+                    </p>
+                </li>
+
+                <li>
+                    <strong>Hospital Management System</strong>
+                    <p>
+                        Created a project for managing patient records,
+                        doctor information, appointments, and hospital data
+                        using Python and MySQL.
+                    </p>
+                </li>
+
+                <li>
+                    <strong>AI Weather Reporter</strong>
+                    <p>
+                        Built an AI automation project that uses weather
+                        information to generate updates and deliver reports
+                        through email.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- COURSE TABLE: EMBEDDED CSS -->
+        <section class="table-section" id="courses">
+            <h2 class="table-heading">Course Schedule and Fees</h2>
+
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <caption>Available Courses</caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Course Name</th>
+                            <th scope="col">Duration</th>
+                            <th scope="col">Timing</th>
+                            <th scope="col">Fees</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Networking</td>
+                            <td>6 Months</td>
+                            <td>10 AM - 12 PM</td>
+                            <td>Rs. 15,000</td>
+                        </tr>
+                        <tr>
+                            <td>Web Technologies</td>
+                            <td>6 Months</td>
+                            <td>2 PM - 4 PM</td>
+                            <td>Rs. 25,000</td>
+                        </tr>
+                        <tr>
+                            <td>Artificial Intelligence</td>
+                            <td>4 Months</td>
+                            <td>4 PM - 6 PM</td>
+                            <td>Rs. 1,000</td>
+                        </tr>
+                        <tr>
+                            <td>Database</td>
+                            <td>3 Months</td>
+                            <td>8 AM - 10 AM</td>
+                            <td>Rs. 5,000</td>
+                        </tr>
+                        <tr>
+                            <td>Software Engineering</td>
+                            <td>5 Months</td>
+                            <td>11 AM - 12 PM</td>
+                            <td>Rs. 20,000</td>
+                        </tr>
+                        <tr>
+                            <td>Cloud Computing</td>
+                            <td>4 Months</td>
+                            <td>2 PM - 3:30 PM</td>
+                            <td>Rs. 13,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- EVENTS TABLE: EMBEDDED CSS -->
+        <section class="table-section">
+            <h2 class="table-heading">Events and Membership Plan</h2>
+
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <caption>Upcoming Events</caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Event Name</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Venue</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Coding Competition</td>
+                            <td>10 November</td>
+                            <td>Computer Lab</td>
+                        </tr>
+                        <tr>
+                            <td>AI Workshop</td>
+                            <td>15 November</td>
+                            <td>Seminar Hall</td>
+                        </tr>
+                        <tr>
+                            <td>Web Development Seminar</td>
+                            <td>20 November</td>
+                            <td>Auditorium</td>
+                        </tr>
+                        <tr>
+                            <td>Gaming Competition</td>
+                            <td>25 November</td>
+                            <td>Main Campus</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- TOUR TABLE: EMBEDDED CSS -->
+        <section class="table-section">
+            <h2 class="table-heading">Tour Packages and Prices</h2>
+
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <caption>Available Tour Packages</caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Duration</th>
+                            <th scope="col">Transport</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Murree</td>
+                            <td>2 Days</td>
+                            <td>Included</td>
+                            <td>Rs. 12,000</td>
+                        </tr>
+                        <tr>
+                            <td>Swat</td>
+                            <td>3 Days</td>
+                            <td>Included</td>
+                            <td>Rs. 18,000</td>
+                        </tr>
+                        <tr>
+                            <td>Hunza</td>
+                            <td>5 Days</td>
+                            <td>Included</td>
+                            <td>Rs. 30,000</td>
+                        </tr>
+                        <tr>
+                            <td>Naran</td>
+                            <td>3 Days</td>
+                            <td>Included</td>
+                            <td>Rs. 20,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- REGISTRATION FORM: EXTERNAL CSS -->
+        <section id="registration"
+            style="margin:30px auto; padding:25px 0;">
+
+            <h2 style="text-align:center; color:#087f8c; font-size:30px;">
+                Student Registration
+            </h2>
+
+            <form class="filed" action="#" method="post">
+
+                <h1>Registration Form</h1>
+
+                <p class="form-description">
+                    Please complete the form below to register.
+                </p>
+
+                <div class="form-grid">
+
+                    <div class="form-field">
+                        <label for="full-name">Full Name *</label>
+                        <input class="input1" id="full-name"
+                            name="full_name" type="text"
+                            placeholder="Enter your full name"
+                            autocomplete="name" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email Address *</label>
+                        <input class="input1" id="email"
+                            name="email" type="email"
+                            placeholder="student@example.com"
+                            autocomplete="email" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="password">Password *</label>
+                        <input class="input1" id="password"
+                            name="password" type="password"
+                            placeholder="Enter 8-13 characters"
+                            minlength="8" maxlength="13"
+                            autocomplete="new-password" required>
+                        <small>Password must be 8-13 characters.</small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="age">Age</label>
+                        <input class="input1" id="age"
+                            name="age" type="number"
+                            min="1" max="120"
+                            placeholder="Enter your age">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="student-file">Choose File</label>
+                        <input class="input1 file-input"
+                            id="student-file" name="student_file"
+                            type="file">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="registration-date">Date</label>
+                        <input class="input1" id="registration-date"
+                            name="registration_date" type="date">
+                    </div>
+
+                </div>
+
+                <fieldset class="choice-group">
+                    <legend>Preferred Learning Mode</legend>
+
+                    <label class="choice">
+                        <input type="radio" name="learning_mode"
+                            value="on-campus" required>
+                        On Campus
+                    </label>
+
+                    <label class="choice">
+                        <input type="radio" name="learning_mode"
+                            value="online">
+                        Online
+                    </label>
+                </fieldset>
+
+                <fieldset class="choice-group">
+                    <legend>Interests</legend>
+
+                    <label class="choice">
+                        <input type="checkbox" name="interests"
+                            value="python">
+                        Python
+                    </label>
+
+                    <label class="choice">
+                        <input type="checkbox" name="interests"
+                            value="web-development">
+                        Web Development
+                    </label>
+
+                    <label class="choice">
+                        <input type="checkbox" name="interests"
+                            value="javascript">
+                        JavaScript
+                    </label>
+                </fieldset>
+
+                <div class="form-field">
+                    <label for="course">Select Course</label>
+
+                    <select class="input1" id="course" name="course">
+                        <option value="">-- Select Course --</option>
+                        <option value="bscs">BSCS</option>
+                        <option value="bscs-ai">BSCMAI</option>
+                        <option value="bsse">BSSE</option>
+                        <option value="cyber-security">Cyber Security</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="comments">Additional Comments</label>
+
+                    <textarea class="input1" id="comments"
+                        name="comments" rows="5"
+                        placeholder="Write your comments here..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn btn-primary" type="submit">
+                        Submit Form
+                    </button>
+
+                    <button class="btn btn-secondary" type="reset">
+                        Clear Form
+                    </button>
+                </div>
+
+                <p class="form-note">* Required fields</p>
+
+            </form>
+        </section>
+        <h2>Media Player</h2>
+        <section style="border: 2px solid black; width: 59%; margin-left: 3px;">
+            <!--Media File-->
+            <video style="margin-left: 4px;" controls width="640" height="360" poster="d:\Shoaib\0f3ac0ec-5158-438e-bde6-4715dd738e90.jfif">
+                <p>Play Mdeia File</p>
+                <source src="c:\Users\ss\Downloads\SHOAIB KHAN (@shoaib.khan..44)_166dff.mp4" type="video/mp4" >
+                your brower does not support this video
+            </video> 
+        </section>
+
+    </main>
+
+    <!-- FOOTER: INLINE CSS -->
+    <footer id="contact"
+        style="padding:30px 15px; color:white;
+               background:linear-gradient(135deg,#075b66,#08adbc);
+               text-align:center;">
+
+        <h2 style="margin-top:0;">Contact Me</h2>
+
+        <p>Interested in working together? Feel free to contact me.</p>
+
+        <p>
+            Email:
+            <a href="mailto:shoaibshoaibkhushi@gmail.com"
+               style="color:white; font-weight:bold;">
+                shoaibshoaibkhushi@gmail.com
+            </a>
+        </p>
+
+        <p style="margin-bottom:0; color:#eafcff;">
+            &copy; 2026 Shoaib Portfolio. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
